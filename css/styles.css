@@ -1,0 +1,142 @@
+:where(*) 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root
+{
+    --colorbg1: #FFDE00;
+    --colorbg2: #004DA3;
+    --colorbg3: #EE161F;
+    --colorfooter: white;
+    --color-texto: white;
+    --valor-borde: 0.15em;
+    --fuente: 1rem;
+    --fuentefooter: 1.3rem;
+}
+
+
+/* GRID TODO EL CONTENIDO */
+
+body
+{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto; /* Organización de 4 bloques verticales */
+    font-size: var(--fuente);
+    color: var(--color-texto);
+}
+
+/* ORGANIZACIÓN BLOQUES */
+
+.header-container
+{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 15vh;
+    background-color: var(--colorbg1);
+}
+
+.main-container
+{
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--colorbg1), var(--colorbg2), var(--colorbg3));
+}
+
+.fechaActual-container
+{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    min-height: 5vh;
+    background-color: var(--colorbg3);
+}
+
+.footer-container
+{
+    background-color: var(--colorfooter);
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+    /* filter: opacity(90%); */
+    min-height: 5vh;
+    padding-left: 1rem;
+    font-size: var(--fuentefooter);
+    color: black;
+}
+
+/* DISEÑO ELEMENTOS INDIVIDUALES */
+
+.imagen
+{
+    height: 4rem;
+}
+
+h1
+{
+    text-align: center;
+    font-size: calc(var(--fuente) * 3.2);
+    letter-spacing: 0.1em;
+}
+
+#contador
+{
+    text-align: center;
+    font-size: calc(var(--fuente) * 3);
+    width: 90%;
+    line-height: 2.25;
+}
+
+#fechaActual
+{
+    text-align: center;
+    font-size: calc(var(--fuente) * 1.25);
+}
+
+.autor-footer 
+{
+    background: linear-gradient(to right, var(--colorbg1), var(--colorbg2), var(--colorbg3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) 
+{
+    :root 
+    {
+        --fuente: 0.75rem;
+    }
+}
+
+@media (max-width: 750px) 
+{
+    :root 
+    {
+        --fuente: 0.65rem;
+    }
+}
+
+@media (max-width: 500px) 
+{
+    :root 
+    {
+        --fuente: 0.6rem;
+        --fuentefooter: 1rem;
+    }
+}
