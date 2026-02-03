@@ -1,5 +1,5 @@
-// Fecha del Mundial: 11 de junio de 2026 a las 00:00
-const fechaMundial = new Date("2026-06-11T00:00:00");
+// Fecha del Mundial: 11 de junio de 2026 a las 15:00
+const fechaMundial = new Date("2026-06-11T15:00:00");
 
 // Elemento del DOM donde se mostrará el contador
 const contadorElemento = document.getElementById("contador");
@@ -61,3 +61,4 @@ function actualizarFechaActual() {
 }
 
 setInterval(actualizarFechaActual, 1000);
+
