@@ -23,7 +23,7 @@ function actualizarContador()
     const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
     // Mostrar resultado con formato profesional
-    contadorElemento.innerHTML = `Faltan: <br><strong>${dias} días ${horas.toString().padStart(2, '0')}h ${minutos.toString().padStart(2, '0')}m ${segundos.toString().padStart(2, '0')}s</strong><br>para el Mundial 2026`;
+    contadorElemento.innerHTML = `Faltan: <br><strong>${dias} días ${horas.toString().padStart(2, '0')}h ${minutos.toString().padStart(2, '0')}m ${segundos.toString().padStart(2, '0')}s</strong><br>para el Mundial 2030`;
 
 
 }
