@@ -7,6 +7,7 @@ const contadorElemento = document.getElementById("contador");
 // Función para actualizar el contador cada segundo
 function actualizarContador() 
 {
+    //Crea un objeto Date con la hora actual del dispositivo del usuario
     const ahora = new Date();
     const diferencia = fechaMundial - ahora;
 
@@ -24,8 +25,6 @@ function actualizarContador()
 
     // Mostrar resultado con formato profesional
     contadorElemento.innerHTML = `Faltan: <br><strong>${dias} días ${horas.toString().padStart(2, '0')}h ${minutos.toString().padStart(2, '0')}m ${segundos.toString().padStart(2, '0')}s</strong><br>para el Mundial 2030`;
-
-
 }
 
 // Ejecutar de inmediato al cargar la página
@@ -34,13 +33,7 @@ actualizarContador();
 // Repetir cada segundo
 const intervalo = setInterval(actualizarContador, 1000);
 
-
-
-
-
-
-
-
+//IMPRIMIR FECHA ACTUAL 
 function actualizarFechaActual() {
     const ahora = new Date();
 
@@ -48,7 +41,7 @@ function actualizarFechaActual() {
                    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 
     const dia = ahora.getDate();
-    const mes = meses[ahora.getMonth()];
+    const mes = meses[ahora.getMonth()]; //Devuelve un número de 0 a 11 (Lo usamos como índice para tomar el nombre correcto del arreglo meses)
     const año = ahora.getFullYear();
 
     const horas = String(ahora.getHours()).padStart(2, "0");
@@ -60,5 +53,5 @@ function actualizarFechaActual() {
     document.getElementById("fechaActual").textContent = texto;
 }
 
+//Actualiza en en tiempo real cada 1 segundo
 setInterval(actualizarFechaActual, 1000);
-
